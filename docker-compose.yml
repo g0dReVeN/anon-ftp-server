@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  ftp-server:
+    build: .
+    environment:
+        ADDRESS:
+        ROOT_DIR: /home/ftp
+    ports:
+      - 21:21
+      - 21000-21100:21000-21100
+      - 990:990
+    restart: always

@@ -13,6 +13,6 @@ RUN apk upgrade --update-cache --available && \
 COPY start.sh /bin/start_vsftpd.sh
 COPY vsftpd.conf /etc/vsftpd/vsftpd.conf
 
-EXPOSE 21 21000-21100
-
 ENTRYPOINT ["/bin/start_vsftpd.sh"]
+
+EXPOSE 21 990 21000-21100
