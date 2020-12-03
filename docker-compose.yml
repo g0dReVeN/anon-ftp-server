@@ -4,10 +4,10 @@ services:
   ftp-server:
     build: .
     environment:
-        ADDRESS:
+        ADDRESS: 
         ROOT_DIR: /home/ftp
     ports:
-      - 21:21
+      - 20-21:20-21
       - 21000-21100:21000-21100
-      - 990:990
+      - 989-990:989990
     restart: always
